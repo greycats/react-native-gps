@@ -1,8 +1,8 @@
 #import <CoreLocation/CoreLocation.h>
 
-#import "RCTBridge.h"
-#import "RCTConvert.h"
-#import "RCTEventDispatcher.h"
+#import <React/RCTBridge.h>
+#import <React/RCTConvert.h>
+#import <React/RCTEventDispatcher.h>
 
 #import "RNLocation.h"
 
@@ -28,7 +28,7 @@ RCT_EXPORT_MODULE()
         self.locationManager.delegate = self;
 
         self.locationManager.distanceFilter = kCLDistanceFilterNone;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
 
         self.locationManager.pausesLocationUpdatesAutomatically = NO;
     }
